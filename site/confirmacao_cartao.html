@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="conf_cartao.css">
+    
+    <title>Confirmação Cartão</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Confirmação de Pagamento</h1>
+        <h2>Detalhes do Pagamento</h2>
+
+        <div class="confirmation-message">
+            O pagamento no valor de R$ 99,50 foi confirmado com sucesso.
+        </div>
+
+        <div class="buttons">
+            <button onclick="returnToHome()">Retornar à Página Inicial</button>
+            <button onclick="goToEnviar()">Verificar Envio</button>
+        </div>
+    </div>
+
+    <script>
+        function returnToHome() {
+            window.location.href = "../index.html";
+        }
+
+        function goToEnviar() {
+            window.location.href = "enviado.html";
+        }
+    </script>
+
+</body>
+</html>

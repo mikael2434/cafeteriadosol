@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafeteria do Sol</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <div class="container">
+        <img src="cafeteria.1.png" alt="Logo da Cafeteria do Sol" class="logo">
+        <div class="nav">
+            <a href="../index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+            <a href="login.html">Login</a>
+        </div>
+        <div class="contact-container">
+            <h1>Entre em Contato Conosco</h1>
+            <p>Estamos aqui para responder às suas perguntas e ouvir seus comentários. Não hesite em entrar em contato conosco. Você pode fazê-lo preenchendo o formulário abaixo ou usando as informações de contato fornecidas.</p>
+            <form class="contact-form" action="seu_script_de_formulario.php" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="10" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+          
+
+            <div class="contact-info">
+                <div>
+                    <span>Endereço:</span> Acapoca
+                </div>
+                <div>
+                    <span>Telefone:</span> (89)99499-9999
+                </div>
+                <div>
+                    <span>E-mail:</span> <a href="mailto:cafeteriadosol@gmail.com" id="email-link">cafeteriadosol@gmail.com</a>
+                </div>
+
+                <div>
+                    <span>Redes Sociais:</span> @cafeteria_do_sol
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2023 Cafeteria do Sol. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+
+    <!-- Inclua o script JavaScript dentro da tag <script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.contact-form');
+
+            form.addEventListener('submit', function (event) {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var subject = document.getElementById('subject').value;
+                var message = document.getElementById('message').value;
+
+                if (!name || !email || !subject || !message) {
+                    alert('Por favor, preencha todos os campos.');
+                    event.preventDefault();
+                } else {
+                    alert('Dados enviados!');
+                    window.location.href = "dados.html";
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

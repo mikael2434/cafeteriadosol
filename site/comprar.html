@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="comprar.css">
+    
+    <title>Finalizar Compra</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Finalizar Compra</h1>
+        <form id="checkoutForm" onsubmit="return validateForm()">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="endereco">Endereço de Entrega:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cartao">Número do Telefone:</label>
+            <input type="text" id="cartao" name="cartao" required>
+
+            <label for="expiracao">Data:</label>
+            <input type="text" id="expiracao" name="expiracao" placeholder="MM/AA" required>
+
+            <label for="cvv">Rua:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" value="credit-card" checked>
+                    Cartão de Crédito
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="pix">
+                    Pix
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="boleto">
+                    Boleto
+                </label>
+            </div>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Validar campos do formulário
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var endereco = document.getElementById('endereco').value;
+            var cartao = document.getElementById('cartao').value;
+            var expiracao = document.getElementById('expiracao').value;
+            var cvv = document.getElementById('cvv').value;
+            var paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+
+            if (nome === "" || email === "" || endereco === "" || cartao === "" || expiracao === "" || cvv === "") {
+                alert("Todos os campos são obrigatórios");
+                return false;
+            }
+
+            // Redirecionar com base no método de pagamento escolhido
+            switch (paymentMethod) {
+                case 'credit-card':
+                    window.location.href = 'cartao.html';
+                    break;
+                case 'pix':
+                    window.location.href = 'pix.html';
+                    break;
+                case 'boleto':
+                    window.location.href = 'boleto.html';
+                    break;
+            }
+
+            return false; // Evitar que o formulário seja enviado
+        }
+    </script>
+
+</body>
+</html>

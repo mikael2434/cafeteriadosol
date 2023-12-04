@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="enviar.css">
+
+    <title>Informações de Entrega</title>
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pedido Enviado!</h1>
+        <p>Seu pedido foi enviado e está a caminho. Aguarde, ele será entregue em aproximadamente <span class="countdown" id="countdown">30:00</span> minutos.</p>
+
+        <button class="back-button" onclick="returnToHome()">Voltar para a Página Inicial</button>
+    </div>
+
+    <script>
+        // Contagem regressiva de 30 minutos
+        var countdown = 30 * 60; // 30 minutos em segundos
+
+        function updateCountdown() {
+            var minutes = Math.floor(countdown / 60);
+            var seconds = countdown % 60;
+
+            document.getElementById('countdown').textContent = padZero(minutes) + ':' + padZero(seconds);
+
+            if (countdown > 0) {
+                countdown--;
+                setTimeout(updateCountdown, 1000); // Atualiza a cada segundo
+            }
+        }
+
+        function padZero(num) {
+            return num < 10 ? '0' + num : num;
+        }
+
+        // Inicia a contagem regressiva quando a página carrega
+        window.onload = function() {
+            updateCountdown();
+        };
+
+        function returnToHome() {
+            window.location.href = "../index.html";
+        }
+    </script>
+
+</body>
+</html>

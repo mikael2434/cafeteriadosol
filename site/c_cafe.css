@@ -1,0 +1,210 @@
+
+        /* Reset de estilos para remover margens e preenchimentos padrão */
+        /* Reset de estilos para remover margens e preenchimentos padrão */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .nav {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #fff; /* Cor do texto branco */
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        /* Adicione esta regra para criar uma cor de fundo quando os links forem hover ou ativos */
+        .nav a:hover, .nav a:active {
+            background-color: #ffaa00; /* Cor de fundo amarela ao passar o mouse ou clicar */
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        .banner {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 450px;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 5px;
+            max-height: 50%;
+        }
+
+        .card h3 {
+            margin: 20px 0; /* Espaço maior entre o título e a imagem */
+            font-size: 24px;
+            color: #333;
+        }
+
+        .card p {
+            color: #777;
+            margin: 10px 0; /* Espaço entre o título e o parágrafo */
+        }
+
+        .button-container {
+            margin-top: 20px; /* Espaço maior entre o parágrafo e o botão */
+        }
+
+        button {
+            background-color: #8B4513; /* Marrom */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff9900; /* Amarelo ao passar o mouse */
+        }
+
+        .footer {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #ffaa00;
+            font-size: 18px;
+        }
+
+        button {
+    background-color: #8B4513;
+    color: #fff;
+    padding: 12px 24px; /* Aumentar o preenchimento para tornar o botão mais visível e clicável */
+    border: 2px solid #8B4513; /* Adicionar uma borda para destacar o botão */
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Adicionar transição suave */
+}
+
+button:hover {
+    background-color: #ff9900;
+    color: #fff; /* Alterar a cor do texto ao passar o mouse */
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px; /* Borda arredondada para a imagem */
+    height: auto; /* Garante que a altura da imagem seja ajustada proporcionalmente à largura */
+}
+.comprar {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilo da imagem */
+.comprar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilo do título */
+.comprar h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Estilo do parágrafo */
+.comprar p {
+  margin-bottom: 10px;
+}
+
+/* Estilo do label */
+.comprar label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo do input */
+.comprar input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Estilo dos botões */
+.comprar button {
+  width: 48%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f90;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Espaçamento entre os botões */
+.comprar button:first-child {
+  margin-right: 4%;
+}

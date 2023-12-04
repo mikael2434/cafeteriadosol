@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pix.css">
+    <link rel="stylesheet" href="pix.js"> 
+    <title>Pagamento PIX</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pagamento PIX</h1>
+        <h2>Chave PIX: 1234567890abcdef</h2>
+
+        <div class="pix-info">
+            <span>Beneficiário: Cafeteria do Sol</span>
+            <span>CPF: 123.456.789-00</span>
+            <span>Valor: R$ 99,50</span>
+            <span>Descrição: Pagamento das suas compras.</span>
+        </div>
+
+        <div class="buttons">
+            <button onclick="confirmPayment()">Confirmar Pagamento</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmPayment() {
+            // Adicione aqui a lógica para confirmar o pagamento via PIX
+            alert("Pagamento confirmado! Redirecionando para a página de confirmação...");
+            window.location.href = "confirmacao_pix.html";
+        }
+    </script>
+
+</body>
+</html>

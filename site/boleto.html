@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boleto.css">
+    <title>Boleto Bancário</title>
+    
+</head>
+<body>
+
+    <div class="container">
+        <h1>Boleto Bancário</h1>
+        <h2>Código de Barras</h2>
+
+        <div class="barcode">
+            <!-- Exemplo de código de barras: 123456789012 -->
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="boleto">
+            <div class="boleto-info">
+                <span>Beneficiário: Cafeteria do Sol</span>
+                <span>Vencimento: 07/12/2023</span>
+            </div>
+            <div class="boleto-info">
+                <span>CPF: 123.456.789-00</span>
+                <span>Valor: R$ 99,50</span>
+            </div>
+            <div class="boleto-info">
+                <span>Agência: 1234</span>
+                <span>Conta: 56789-0</span>
+            </div>
+            <div class="boleto-info">
+                <span>Nome do Pagador: Poliana Pharo dos Santos</span>
+            </div>
+            <div class="boleto-info">
+                <span>Endereço do Pagador: Posto Fiscal, 000 - Acauã</span>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="shareWhatsApp()">Compartilhar</button>
+        </div>
+
+        <!-- Botão de impressão -->
+        <button class="print-button" onclick="printBoleto()">Imprimir Boleto</button>
+    </div>
+    <<script>
+        function shareWhatsApp() {
+    // Adapte o número de telefone conforme necessário
+    var phoneNumber = "1234567890";
+    
+    // Construa a URL do WhatsApp
+    var whatsappURL = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=Confira%20o%20boleto%20bancário%3A%20[INSIRA%20O%20CÓDIGO%20DE%20BARRAS%20AQUI]";
+    
+    // Abra a URL no WhatsApp
+    window.open(whatsappURL);
+}
+
+function printBoleto() {
+    // Oculta os elementos que não devem ser impressos
+    var elementsToHide = document.querySelectorAll('.buttons, .print-button');
+    for (var i = 0; i < elementsToHide.length; i++) {
+        elementsToHide[i].style.display = 'none';
+    }
+
+    // Exibe o botão de impressão
+    var printButton = document.querySelector('.print-button');
+    printButton.style.display = 'block';
+
+    // Imprime a página
+    window.print();
+
+    // Restaura a exibição dos elementos ocultos após a impressão
+    for (var i = 0; i < elementsToHide.length; i++) {
+        elementsToHide[i].style.display = 'block';
+    }
+
+    // Oculta novamente o botão de impressão
+    printButton.style.display = 'none';
+}
+    </script>
+
+</body>
+</html>
